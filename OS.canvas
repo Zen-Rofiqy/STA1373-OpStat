@@ -1,0 +1,41 @@
+{
+	"nodes":[
+		{"id":"23052ad07b2f070f","type":"text","text":"# Pertemuan 1","x":-588,"y":-471,"width":250,"height":60},
+		{"id":"db8ea0aafc0f0892","type":"text","text":"### Sebaran Nilai\nA = 37\nAB = 25\nB = 9\nBC = 2\nC = 0","x":-160,"y":-471,"width":315,"height":220},
+		{"id":"bac4157e847d6419","type":"file","file":"Pasted image 20240126082052.png","x":-160,"y":-220,"width":471,"height":240},
+		{"id":"9f108397e2fb0e5f","type":"text","text":"Submit ke jurnal gak wajib","x":320,"y":-60,"width":250,"height":60},
+		{"id":"ac50de38505d2312","type":"text","text":"Konvergensi, mendekati. Misal limit x = 0. Konvergen ke nol.\nML, Deep L, itu metode pendugaan non parametrik. \nMetode pendugaan di papernya harus dijelaskan. Seperti MLE. \nNanti html nya diminta, karena akan dilihat program iteratif nya, bukan pake package.\n\nMimic life. PSO -> Particle Swarm Optimizer\nFlock of bird school of fish\nParticle = Bird, Swarm = kelompok.\nIbarat kelompok burung kalo pergi-pergi gak ada yang ketinggalan\n\nPresentasi di buat YT","x":-800,"y":-390,"width":580,"height":341},
+		{"id":"192fc6c47e8bbaa1","type":"text","text":"Ada nilai Keaktifan","x":219,"y":-435,"width":250,"height":60},
+		{"id":"dba8f4b7e90ee24c","type":"text","text":"Jadi buat Paper & PPT","x":-1100,"y":-249,"width":250,"height":60},
+		{"id":"4a8a8a8720da4a9a","type":"text","text":"Kalo mau lulus tepat waktu\n2. Growth mindset\n3. Adab\n4. Selalu berprogres walau sedikit","x":-754,"y":45,"width":354,"height":255},
+		{"id":"ee2a6ba839c7966d","type":"file","file":"Pasted image 20240126100617.png","x":-261,"y":75,"width":400,"height":212},
+		{"id":"17b623b4d68ee4fc","type":"text","text":"Dalam regresi biasa, beta dapat di duga juga menggunakan Maximum Likelihood","x":174,"y":75,"width":396,"height":123},
+		{"id":"2b9896ac555273fc","type":"file","file":"Pasted image 20240126102027.png","x":-261,"y":340,"width":400,"height":319},
+		{"id":"f4cce66b88b92465","type":"text","text":"Kalo OLS kan intinya pengen jarak titik ke garis nya itu seminimum mungkin. \nSedangkan MLE itu memaksimumkan kemungkinan sebaran per x nya (serbaran normal). ","x":200,"y":340,"width":396,"height":176},
+		{"id":"5d26c30c55f22ab6","type":"file","file":"Pasted image 20240126102245.png","x":-710,"y":363,"width":400,"height":307},
+		{"id":"b649d22a4bc9c7e2","type":"file","file":"Pasted image 20240126103304.png","x":-1400,"y":304,"width":480,"height":299},
+		{"id":"bc3b712eedb4be6f","type":"file","file":"WhatsApp Image 2024-01-26 at 10.23.15_782be468.jpg","x":-1400,"y":659,"width":400,"height":324},
+		{"id":"3994252c620a4ae3","type":"text","text":"**Program Linear** https://soalfismat.com/contoh-soal-program-linear/","x":-1428,"y":198,"width":588,"height":89},
+		{"id":"ec706c493b3f87a0","type":"file","file":"Pasted image 20240126102407.png","x":-1454,"y":1145,"width":565,"height":260},
+		{"id":"ead00a232aa6349f","type":"text","text":"**OLS** https://builtin.com/data-science/ols-regression","x":-1449,"y":1040,"width":529,"height":73},
+		{"id":"3d65270e630e8391","type":"file","file":"Pasted image 20240126103455.png","x":-814,"y":821,"width":609,"height":260},
+		{"id":"446905fa3ae03a33","type":"text","text":"**Hessian Matrix** https://www.youtube.com/watch?v=oGykdWXh8fk","x":-829,"y":714,"width":637,"height":75},
+		{"id":"6a34445b471ae542","type":"file","file":"Pasted image 20240126103753.png","x":-61,"y":833,"width":631,"height":280},
+		{"id":"29ff19316cc39d1a","type":"text","text":"**MLE** https://ammarsahab.github.io/InferensiaStat/3-MaximumLikelihood.html#fungsi-likelihood","x":-61,"y":712,"width":724,"height":77},
+		{"id":"b7c882507af2d501","type":"file","file":"Pasted image 20240126105229.png","x":-1503,"y":1460,"width":638,"height":360},
+		{"id":"fa84f6859c8d1085","type":"file","file":"WhatsApp Image 2024-01-26 at 10.57.33_613f7af7.jpg","x":-764,"y":1145,"width":509,"height":349},
+		{"id":"6828786313a93aa4","type":"file","file":"Pasted image 20240126111213.png","x":-61,"y":1183,"width":631,"height":432},
+		{"id":"de14799badf01851","type":"file","file":"Pasted image 20240126103906.png","x":-202,"y":1720,"width":772,"height":232}
+	],
+	"edges":[
+		{"id":"feb8484d5e173b9a","fromNode":"bac4157e847d6419","fromSide":"right","toNode":"9f108397e2fb0e5f","toSide":"top"},
+		{"id":"ab344a8ebd54b70a","fromNode":"ac50de38505d2312","fromSide":"left","toNode":"dba8f4b7e90ee24c","toSide":"right"},
+		{"id":"0449dc299e76ec6a","fromNode":"ee2a6ba839c7966d","fromSide":"right","toNode":"17b623b4d68ee4fc","toSide":"left"},
+		{"id":"62887d8727d3e8c6","fromNode":"17b623b4d68ee4fc","fromSide":"bottom","toNode":"f4cce66b88b92465","toSide":"top"},
+		{"id":"572551e2ae36e174","fromNode":"2b9896ac555273fc","fromSide":"right","toNode":"f4cce66b88b92465","toSide":"left"},
+		{"id":"acbc2ad0424cf930","fromNode":"b649d22a4bc9c7e2","fromSide":"bottom","toNode":"bc3b712eedb4be6f","toSide":"top"},
+		{"id":"b4d195973cd9d505","fromNode":"ec706c493b3f87a0","fromSide":"bottom","toNode":"b7c882507af2d501","toSide":"top"},
+		{"id":"e4b2b4b9e8b320f0","fromNode":"3d65270e630e8391","fromSide":"bottom","toNode":"fa84f6859c8d1085","toSide":"top"},
+		{"id":"a129630de6a2b369","fromNode":"6a34445b471ae542","fromSide":"bottom","toNode":"6828786313a93aa4","toSide":"top"}
+	]
+}
