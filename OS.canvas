@@ -25,7 +25,15 @@
 		{"id":"b7c882507af2d501","type":"file","file":"Pasted image 20240126105229.png","x":-1503,"y":1460,"width":638,"height":360},
 		{"id":"fa84f6859c8d1085","type":"file","file":"WhatsApp Image 2024-01-26 at 10.57.33_613f7af7.jpg","x":-764,"y":1145,"width":509,"height":349},
 		{"id":"6828786313a93aa4","type":"file","file":"Pasted image 20240126111213.png","x":-61,"y":1183,"width":631,"height":432},
-		{"id":"de14799badf01851","type":"file","file":"Pasted image 20240126103906.png","x":-202,"y":1720,"width":772,"height":232}
+		{"id":"de14799badf01851","type":"file","file":"Pasted image 20240126103906.png","x":-202,"y":1720,"width":772,"height":232},
+		{"id":"6c1620927bee8d40","x":1750,"y":-543,"width":250,"height":60,"type":"text","text":"Eleminasi gaus"},
+		{"id":"1f14e1620f4b0bfa","x":1750,"y":-453,"width":250,"height":60,"type":"text","text":"Eleminasi Gauss-Jordan"},
+		{"id":"389287ebbe526c0c","x":1432,"y":-483,"width":250,"height":60,"type":"text","text":"Direct search"},
+		{"id":"319f6372d4cb76dc","x":1750,"y":-358,"width":250,"height":60,"type":"text","text":"Iterasi  Jacom"},
+		{"id":"7abf6de78fc99d18","x":1750,"y":-273,"width":250,"height":60,"type":"text","text":"Iterasi Gauss - Siedel"},
+		{"id":"6b33741fcb7364a3","x":1432,"y":-303,"width":250,"height":60,"type":"text","text":"Indirect (iteratif)"},
+		{"id":"cb5136e93317948f","x":1231,"y":-383,"width":123,"height":50,"type":"text","text":"SPL"},
+		{"id":"aa91599d1ac786a7","x":1293,"y":-700,"width":250,"height":60,"type":"text","text":"# Pertemuan 2"}
 	],
 	"edges":[
 		{"id":"feb8484d5e173b9a","fromNode":"bac4157e847d6419","fromSide":"right","toNode":"9f108397e2fb0e5f","toSide":"top"},
@@ -36,6 +44,12 @@
 		{"id":"acbc2ad0424cf930","fromNode":"b649d22a4bc9c7e2","fromSide":"bottom","toNode":"bc3b712eedb4be6f","toSide":"top"},
 		{"id":"b4d195973cd9d505","fromNode":"ec706c493b3f87a0","fromSide":"bottom","toNode":"b7c882507af2d501","toSide":"top"},
 		{"id":"e4b2b4b9e8b320f0","fromNode":"3d65270e630e8391","fromSide":"bottom","toNode":"fa84f6859c8d1085","toSide":"top"},
-		{"id":"a129630de6a2b369","fromNode":"6a34445b471ae542","fromSide":"bottom","toNode":"6828786313a93aa4","toSide":"top"}
+		{"id":"a129630de6a2b369","fromNode":"6a34445b471ae542","fromSide":"bottom","toNode":"6828786313a93aa4","toSide":"top"},
+		{"id":"fc8b0a4cfa8e1391","fromNode":"389287ebbe526c0c","fromSide":"right","toNode":"6c1620927bee8d40","toSide":"left"},
+		{"id":"9ba3454f3707f50d","fromNode":"389287ebbe526c0c","fromSide":"right","toNode":"1f14e1620f4b0bfa","toSide":"left"},
+		{"id":"f38e9cf76260c651","fromNode":"6b33741fcb7364a3","fromSide":"right","toNode":"319f6372d4cb76dc","toSide":"left"},
+		{"id":"9bd5c36cd8902f9e","fromNode":"6b33741fcb7364a3","fromSide":"right","toNode":"7abf6de78fc99d18","toSide":"left"},
+		{"id":"7183984e296d70c0","fromNode":"cb5136e93317948f","fromSide":"right","toNode":"389287ebbe526c0c","toSide":"left"},
+		{"id":"a9d855c450dd9871","fromNode":"cb5136e93317948f","fromSide":"right","toNode":"6b33741fcb7364a3","toSide":"left"}
 	]
 }
