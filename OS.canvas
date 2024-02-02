@@ -26,14 +26,14 @@
 		{"id":"fa84f6859c8d1085","type":"file","file":"WhatsApp Image 2024-01-26 at 10.57.33_613f7af7.jpg","x":-764,"y":1145,"width":509,"height":349},
 		{"id":"6828786313a93aa4","type":"file","file":"Pasted image 20240126111213.png","x":-61,"y":1183,"width":631,"height":432},
 		{"id":"de14799badf01851","type":"file","file":"Pasted image 20240126103906.png","x":-202,"y":1720,"width":772,"height":232},
-		{"id":"6c1620927bee8d40","x":1750,"y":-543,"width":250,"height":60,"type":"text","text":"Eleminasi gaus"},
-		{"id":"1f14e1620f4b0bfa","x":1750,"y":-453,"width":250,"height":60,"type":"text","text":"Eleminasi Gauss-Jordan"},
-		{"id":"389287ebbe526c0c","x":1432,"y":-483,"width":250,"height":60,"type":"text","text":"Direct search"},
-		{"id":"319f6372d4cb76dc","x":1750,"y":-358,"width":250,"height":60,"type":"text","text":"Iterasi  Jacom"},
-		{"id":"7abf6de78fc99d18","x":1750,"y":-273,"width":250,"height":60,"type":"text","text":"Iterasi Gauss - Siedel"},
-		{"id":"6b33741fcb7364a3","x":1432,"y":-303,"width":250,"height":60,"type":"text","text":"Indirect (iteratif)"},
-		{"id":"cb5136e93317948f","x":1231,"y":-383,"width":123,"height":50,"type":"text","text":"SPL"},
-		{"id":"aa91599d1ac786a7","x":1293,"y":-700,"width":250,"height":60,"type":"text","text":"# Pertemuan 2"}
+		{"id":"aa91599d1ac786a7","x":1293,"y":-700,"width":250,"height":60,"type":"text","text":"# Pertemuan 2"},
+		{"id":"6c1620927bee8d40","x":1814,"y":-640,"width":250,"height":60,"type":"text","text":"Eleminasi gaus"},
+		{"id":"1f14e1620f4b0bfa","x":1814,"y":-550,"width":250,"height":60,"type":"text","text":"Eleminasi Gauss-Jordan"},
+		{"id":"389287ebbe526c0c","x":1496,"y":-580,"width":250,"height":60,"type":"text","text":"Direct search"},
+		{"id":"319f6372d4cb76dc","x":1814,"y":-455,"width":250,"height":60,"type":"text","text":"Iterasi  Jacom"},
+		{"id":"7abf6de78fc99d18","x":1814,"y":-370,"width":250,"height":60,"type":"text","text":"Iterasi Gauss - Siedel"},
+		{"id":"6b33741fcb7364a3","x":1496,"y":-400,"width":250,"height":60,"type":"text","text":"Indirect (iteratif)"},
+		{"id":"cb5136e93317948f","x":1295,"y":-480,"width":123,"height":50,"type":"text","text":"SPL"}
 	],
 	"edges":[
 		{"id":"feb8484d5e173b9a","fromNode":"bac4157e847d6419","fromSide":"right","toNode":"9f108397e2fb0e5f","toSide":"top"},
