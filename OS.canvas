@@ -30,10 +30,10 @@
 		{"id":"6c1620927bee8d40","x":1814,"y":-640,"width":250,"height":60,"type":"text","text":"Eleminasi gaus"},
 		{"id":"1f14e1620f4b0bfa","x":1814,"y":-550,"width":250,"height":60,"type":"text","text":"Eleminasi Gauss-Jordan"},
 		{"id":"389287ebbe526c0c","x":1496,"y":-580,"width":250,"height":60,"type":"text","text":"Direct search"},
-		{"id":"319f6372d4cb76dc","x":1814,"y":-455,"width":250,"height":60,"type":"text","text":"Iterasi  Jacom"},
-		{"id":"7abf6de78fc99d18","x":1814,"y":-370,"width":250,"height":60,"type":"text","text":"Iterasi Gauss - Siedel"},
+		{"id":"319f6372d4cb76dc","x":1814,"y":-455,"width":250,"height":85,"type":"text","text":"#### Iterasi  Jacobi\nIterasi sampe konvergen. "},
 		{"id":"6b33741fcb7364a3","x":1496,"y":-400,"width":250,"height":60,"type":"text","text":"Indirect (iteratif)"},
-		{"id":"cb5136e93317948f","x":1295,"y":-480,"width":123,"height":50,"type":"text","text":"SPL"}
+		{"id":"cb5136e93317948f","x":1295,"y":-480,"width":123,"height":50,"type":"text","text":"SPL"},
+		{"id":"7abf6de78fc99d18","x":1814,"y":-340,"width":306,"height":120,"type":"text","text":"#### Iterasi Gauss - Siedel\nSama kyk jacobi, tapi lebih cepet konvergen"}
 	],
 	"edges":[
 		{"id":"feb8484d5e173b9a","fromNode":"bac4157e847d6419","fromSide":"right","toNode":"9f108397e2fb0e5f","toSide":"top"},
