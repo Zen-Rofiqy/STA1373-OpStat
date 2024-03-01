@@ -5,3 +5,50 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
+# Pertemuan 6
+
+```{r}
+steepestDescent <- function(f, x0, tol = 1e-6, maxIter = 1000) {
+  # Initialize variables
+  x <- x0
+  fx <- f(x)
+  gradx <- numDeriv::grad(func=f,x=x)
+  iter <- 0
+  
+  # Iterate until convergence or maximum number of iterations reached
+  while (iter < maxIter && norm(as.matrix(gradx)) > tol) {
+    # Calculate step size using line search
+    alpha <- optimize(function(a) f(x - a * gradx), interval = c(0, 1))$minimum
+    
+    # Update x
+    x <- x - alpha * gradx
+    
+    # Calculate function value and gradient at new x
+    fx <- f(x)
+    gradx <- numDeriv::grad(func=f,x=x)
+    
+    # Update iteration count
+    iter <- iter + 1
+  }
+  
+  # Return the final solution and function value
+  return(list(x = x, fx = fx, iter = iter))
+}
+```
+
+```{r}
+f<-function(x) {
+  x1=x[1]; x2=x[2];
+  x1-x2+(2*x1^2)+(2*x1*x2)+(x2^2)
+}
+
+x0<-c(0,0)
+
+steepestDescent(f=f, x0=x0)
+```
+
+```{r}
+x0<-c(5,5)
+
+steepestDescent(f=f, x0=x0)
+```
