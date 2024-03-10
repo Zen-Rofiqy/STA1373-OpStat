@@ -1,9 +1,192 @@
 ---
 title: "Opstat"
 author: "Angga Fathan Rofiqy"
-date: "`r Sys.Date()`"
-output: html_document
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmdformats::downcute:
+    self_contained: true
+    thumbnails: false
+    lightbox: true
+    gallery: true
+    highlight: tango
+    code_folding: show
+    toc_depth: 3
+    number_sections: false
+    toc_float:
+      collapsed: true
+      smooth_scroll: true
+    fig_caption: true
+pkgdown:
+  as_is: true
 ---
+
+# Kuliah 5
+
+## Fungsi Fibonacci
+
+```{r}
+# Fungsi Fibonacci 
+
+fibonacci <- function(n) {
+  fn <- c(1,1)
+  for (i in 2:n+1)
+  {
+    fn <- c(fn, (fn[i-1]+fn[i-2]))
+  }
+  return(fn)
+}
+
+#fibonacci(10)
+
+#N <- 16
+
+#data <- data.frame(
+#  n = 1:N,
+#  Fibonacci = fibonacci(15)
+#)
+#data
+
+# Fibonacci Search Method
+
+fib_search <- function(f, xl, xr, n){
+  F = fibonacci(n) # Call the fibonnaci number function
+  L0 = xr - xl # Initial interval of uncertainty
+  R1 = L0 # Initial Reduction Ratio
+  Li = (F[n-2]/F[n])*L0 
+  
+  R = Li/L0
+  
+  for (i in 2:n)
+  {
+    if (Li > L0/2) {
+      x1 = xr - Li
+      x2 = xl + Li
+    } else {
+      x1 = xl + Li
+      x2 = xr - Li
+    }
+    f1 = f(x1)
+    f2 = f(x2)
+    
+    if (f1 < f2) {
+      xr = x2
+      Li = (F[n - i]/F[n - (i - 2)])*L0 # New interval of uncertainty
+    } else if (f1 > f2) {
+      xl = x1
+      Li = (F[n - i]/F[n - (i - 2)])*L0 # New interval of uncertainty
+    } else {
+      xl = x1
+      xr = x2
+      Li = (F[n - i]/F[n - (i - 2)])*(xr - xl) # New interval of uncertainty
+    }
+    L0 = xr - xl
+    R = c(R, Li/R1)
+  }
+  
+  list1 <- list(x1, f(x1), R) # Membuat sebagai list sehingga bisa dipanggil keluar dengan fungsi return.
+  names(list1) <- c("x", "f(x)", "R") # Memberi nama pada elemen suatu list.
+  list2 <- list(x2, f(x2), R)
+  names(list2) <- c("x", "f(x)", "R")
+  if (f1 <= f2) {
+    return(list1) # Final result
+  } else {
+    return(list2) # Final result 
+  }
+}
+
+f <- function(x) {
+  x^5-5*x^3-20*x+5
+}
+
+Fib = fib_search(f, -2.5, 2.5, 25)
+Fib
+
+
+curve(f,xlim=c(-3,3), col='steelblue',lwd=2)
+abline(h=0)
+abline(v=0)
+
+```
+
+## Fungsi Quadratic
+
+```{r}
+
+quadraticinterpolation <- function(phi.f, l = 0, u = 1, eps = 1e-6)
+{
+  #polynomials evaluated at 3 points(l, m, u) for interpolation: phi_fl, phi_fm, phi_fu
+  if(l == u)
+  {
+    l <- 0
+  }
+  m <- (l + u)/2
+  phi.fl <- phi.f(l)
+  phi.fm <- phi.f(m)
+  phi.fu <- phi.f(u)
+  
+  
+  #a, b and c are coefficients of the polynomial (hx)
+  y <- ((l - m)*(m - u)*(u - l))
+  a <- (phi.fl*m*u*(u - m) + phi.fm*u*l*(l - u) + phi.fu*l*m*(m - l))/y
+  b <- (phi.fl*(m^2 - u^2) + phi.fm*(u^2 - l^2) + phi.fu*(l^2 - m^2))/y
+  c <- -(phi.fl*(m - u) + phi.fm*(u - l) + phi.fu*(l - m))/y
+  
+  alpha <- -b/(2*c)
+  falpha <- phi.f(alpha)
+  
+  ncf <- 4
+  
+  hx <- function(x)  c*x^2 + b*x + a #environment global
+  
+  while((abs((hx(alpha) - falpha)) > eps))
+  {
+    #choice of l, m and C new values
+    if(alpha <= m)
+    {
+      if(phi.fm >= falpha){
+        u <- m; phi.fu <- phi.fm
+        m <- alpha; phi.fm <- falpha
+      }else{
+        l <- alpha; phi.fl <- falpha
+      }
+    }else{
+      if(phi.fm >= falpha){
+        l <- m; phi.fl <- phi.fm
+        m <- alpha; phi.fm <- falpha
+      }else{
+        u <- alpha; phi.fu <- falpha
+      }
+      
+    }
+    
+    
+    #refitting the function
+    y <- ((l - m)*(m - u)*(u - l))
+    a <- (phi.fl*m*u*(u - m) + phi.fm*u*l*(l - u) + phi.fu*l*m*(m - l))/y
+    b <- (phi.fl*(m^2 - u^2) + phi.fm*(u^2 - l^2) + phi.fu*(l^2 - m^2))/y
+    c <- -(phi.fl*(m - u) + phi.fm*(u - l) + phi.fu*(l - m))/y
+    
+    #quadratic interpolation
+    
+    alpha <- -b/(2*c)
+    falpha <- phi.f(alpha)
+    ncf <- ncf + 1
+    
+  }
+  message("Method: Quadratic Interpolation. Number of calls of the objective function: ", ncf)
+  return(alpha)
+}
+
+f <- function(x) {
+  x^4 -2*x^2 + 1/4
+}
+quadraticinterpolation(f)
+quadraticinterpolation(f, l = -1.5, u=7, eps=1e-5)
+
+curve(f,xlim=c(-2,2), col='steelblue',lwd=2)
+abline(h=0)
+abline(v=0)
+```
 
 # Pertemuan 6
 
