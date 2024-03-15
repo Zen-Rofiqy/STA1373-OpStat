@@ -290,3 +290,72 @@ optim_nm(fun = H, k = 2, trace = TRUE, start = c(-2, 4))
 Output <- optim_nm(fun = H, k = 2, trace = TRUE)
 plot(Output)
 ```
+
+# Kuis 6-7
+
+```{r}
+optim_func <- function(x) {
+  x1 <- x[1]
+  x2 <- x[2]
+  return((1.5 - x1 + x1*x2)^2 + (2.25 - x1 + x1*x2^2)^2 + (2.625 - x1 + x1*x2^3)^2)
+}
+
+grad_func <- function(x) {
+  x1 <- x[1]
+  x2 <- x[2]
+  grad1 <- 2*(1.5 - x1 + x1*x2)*(x2 - 1) + 2*(2.25 - x1 + x1*x2^2)*(x2^2 - 1) + 2*(2.625 - x1 + x1*x2^3)*(x2^3 - 1)
+  grad2 <- 2*(1.5 - x1 + x1*x2)*x1 + 2*(2.25 - x1 + x1*x2^2)*2*x1*x2 + 2*(2.625 - x1 + x1*x2^3)*3*x1*x2^2
+  return(c(grad1, grad2))
+}
+
+steepest_descent <- function(start_point, alpha, tol, max_iter) {
+  x_curr <- start_point
+  iter <- 0
+  for (i in 1:max_iter) {
+    grad <- grad_func(x_curr)
+    if (sqrt(sum(grad^2)) < tol) {
+      break
+    }
+    x_curr <- x_curr - alpha * grad
+    iter <- iter + 1
+  }
+  return(list(optimum = x_curr, iterations = iter))
+}
+
+# Initial points and parameters
+start_points <- list(c(3, 0.4), c(2.9, 0.5), c(2.5, 0.5), c(0, 0))
+alpha <- 0.01
+tol <- 1e-8
+max_iter <- 1000
+
+results <- lapply(start_points, function(point) {
+  steepest_descent(point, alpha, tol, max_iter)
+})
+
+names(results) <- c("Start (3, 0.4)", "Start (2.9, 0.5)", "Start (2.5, 0.5)", "Start (0, 0)")
+results
+```
+
+```{r}
+library(numDeriv)
+
+# Fungsi yang akan dioptimumkan
+f <- function(x) {
+ x1 <- x[1]
+ x2 <- x[2]
+ (1.5 - x1 + x1 * x2)^2 + (2.25 - x1 + x1 * x2^2)^2 + (2.625 - x1 + x1 * x2^3)^2
+}
+
+# Menggunakan algoritma BFGS
+optim_result_1 <- optim(par = c(2.5, 0.5), fn = f, method = "BFGS")
+optim_result_2 <- optim(par = c(100, 100), fn = f, method = "BFGS")
+optim_result_3 <- optim(par = c(0, 0), fn = f, method = "BFGS")
+
+# Menampilkan hasil
+cat("Titik awal (2.5, 0.5):\n")
+print(optim_result_1)
+cat("\nTitik awal (100, 100):\n")
+print(optim_result_2)
+cat("\nTitik awal (0, 0):\n")
+print(optim_result_3)
+```
