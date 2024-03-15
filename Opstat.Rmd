@@ -275,37 +275,18 @@ steepestDescent(f=f, x0=x0)
 # Kuis 4-5
 
 ```{r}
-# Fungsi yang diberikan
-f <- function(x) {
-  return(-1 / ((x - 1)^2) * (log(x) - 2 * (x - 1) / (x + 1)))
+install.packages("optimization")
+```
+
+```{r}
+library(optimization)
+H <- function(x){
+    x[1]^4 -2*x[1]^2*x[2] + x[1]^2 +x[2]^2 +2*x[1] +1
 }
+optim_nm(fun = H, k = 2, trace = TRUE, start = c(-2, 4))
+```
 
-# Hitung turunan pertama
-f_prime <- function(x) {
-  h <- 1e-6  # Nilai h yang sangat kecil
-  return((f(x + h) - f(x)) / h)
-}
-
-# Hitung turunan kedua
-f_double_prime <- function(x) {
-  h <- 1e-6
-  return((f_prime(x + h) - f_prime(x)) / h)
-}
-
-# Contoh penggunaan
-x_value <- 3  # Ganti dengan nilai x yang diinginkan
-first_derivative <- f_prime(x_value)
-second_derivative <- f_double_prime(x_value)
-
-cat("Nilai turunan pertama pada x =", x_value, "adalah", first_derivative, "\n")
-cat("Nilai turunan kedua pada x =", x_value, "adalah", second_derivative, "\n")
-
-# Analisis tanda-tanda
-if (second_derivative > 0) {
-  cat("Kurva cekung ke atas pada selang (1.0; 5.0)\n")
-} else if (second_derivative < 0) {
-  cat("Kurva cekung ke bawah pada selang (1.0; 5.0)\n")
-} else {
-  cat("Tidak dapat menentukan kecekungan pada selang (1.0; 5.0)\n")
-}
+```{r}
+Output <- optim_nm(fun = H, k = 2, trace = TRUE)
+plot(Output)
 ```
